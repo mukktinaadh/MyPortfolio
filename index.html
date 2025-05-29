@@ -9,14 +9,27 @@
     html {
       scroll-behavior: smooth;
     }
+    .animate-text {
+      animation: moveFont 3s ease-in-out infinite alternate;
+    }
+    @keyframes moveFont {
+      0% {
+        letter-spacing: 2px;
+        transform: translateY(0);
+      }
+      100% {
+        letter-spacing: 5px;
+        transform: translateY(-5px);
+      }
+    }
   </style>
 </head>
 <body class="bg-white text-gray-900 font-sans">
 
   <!-- Hero Section -->
   <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b from-black to-gray-900 text-white">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Hi, I’m MukktiNaadh</h1>
-    <p class="text-lg sm:text-xl md:text-2xl mb-8">I build systems at the edge of AI, Blockchain & Distributed Computing</p>
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 animate-text">Hi, I’m MukktiNaadh</h1>
+    <p class="text-lg sm:text-xl md:text-2xl mb-8 animate-text">I build systems at the edge of AI, Blockchain & Distributed Computing</p>
     <div class="space-x-4">
       <a href="https://github.com/mukktinaadh" class="bg-white text-black px-5 py-2 rounded font-medium hover:bg-gray-100">GitHub</a>
       <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded font-medium hover:bg-blue-700">Contact</a>
@@ -27,48 +40,78 @@
   <section id="about" class="py-20 px-6 max-w-4xl mx-auto">
     <h2 class="text-3xl font-semibold text-center mb-6">About Me</h2>
     <p class="text-lg text-gray-700 leading-relaxed">
-      I'm a 3rd year B.Tech CSE (Big Data Analytics) student and a full-stack Java developer with a knack for real-world scalable projects. From building blockchain-backed federated learning systems to AI chatbots and college ERP systems, I love solving problems and optimizing systems. I thrive under pressure, and I’m placement-ready for top-tier product companies.
+      I'm a 3rd year B.Tech CSE (Big Data Analytics) student and a full-stack Java developer with a passion for cutting-edge tech. From building blockchain-backed federated learning platforms to crafting scalable AI tools, I thrive on solving real-world problems with elegant software. I am fluent in system design, cloud deployments, and always curious to push boundaries.
     </p>
   </section>
 
   <!-- Projects Section -->
   <section id="projects" class="bg-gray-100 py-20 px-6">
-    <h2 class="text-3xl font-semibold text-center mb-10">Selected Projects</h2>
-    <div class="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold text-center mb-10">Highlighted GitHub Projects</h2>
+    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto">
 
       <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
         <h3 class="text-xl font-bold mb-2">VeriBlock-FL</h3>
-        <p class="text-sm text-gray-600 mb-4">Federated learning on blockchain using zk-SNARKs for privacy-preserving ML.</p>
+        <p class="text-sm text-gray-600 mb-4">A blockchain-powered federated learning platform implementing zk-SNARK privacy protocols. It ensures secure, decentralized training without compromising data privacy.</p>
+        <ul class="text-sm text-gray-500 list-disc list-inside mb-4">
+          <li>Blockchain-based identity and audit trails</li>
+          <li>Cross-node ML model aggregation</li>
+          <li>zk-SNARKs implementation from scratch</li>
+        </ul>
         <a href="https://github.com/mukktinaadh/Veriblock-FL" class="text-blue-600 font-medium">View GitHub</a>
       </div>
 
       <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
         <h3 class="text-xl font-bold mb-2">Mental Health Chatbot</h3>
-        <p class="text-sm text-gray-600 mb-4">AI-powered emotional wellness assistant using NLP and sentiment analysis.</p>
+        <p class="text-sm text-gray-600 mb-4">An AI-driven emotional wellness chatbot built using transformer models and sentiment classification to help users vent, reflect, and receive motivational support.</p>
+        <ul class="text-sm text-gray-500 list-disc list-inside mb-4">
+          <li>Custom NLP pipeline</li>
+          <li>Sentiment-aware responses</li>
+          <li>Live chat UI + feedback tracker</li>
+        </ul>
         <a href="https://github.com/mukktinaadh/Mental-Health-Chatbot" class="text-blue-600 font-medium">View GitHub</a>
       </div>
 
       <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
         <h3 class="text-xl font-bold mb-2">College Management System</h3>
-        <p class="text-sm text-gray-600 mb-4">Full-stack academic portal built with Java, Spring Boot, and MySQL.</p>
+        <p class="text-sm text-gray-600 mb-4">An enterprise-grade student portal built with Java, Spring Boot, and MySQL to streamline student, faculty, and admin operations.</p>
+        <ul class="text-sm text-gray-500 list-disc list-inside mb-4">
+          <li>Student CRUD, role-based login</li>
+          <li>Automated timetable & attendance modules</li>
+          <li>Clean dashboard with REST API</li>
+        </ul>
         <a href="https://github.com/mukktinaadh/College-Management-System" class="text-blue-600 font-medium">View GitHub</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">CDataDB</h3>
+        <p class="text-sm text-gray-600 mb-4">A blazing fast in-memory database written in C for low-latency storage, demonstrating system-level control and hash-mapped persistence.</p>
+        <ul class="text-sm text-gray-500 list-disc list-inside mb-4">
+          <li>Low-level memory optimization</li>
+          <li>Hashmap + key-value store</li>
+          <li>Built and deployed with full CLI support</li>
+        </ul>
+        <a href="https://github.com/mukktinaadh/CDataDB" class="text-blue-600 font-medium">View GitHub</a>
       </div>
 
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section class="py-20 px-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-semibold text-center mb-8">Skills</h2>
+  <section class="py-20 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold text-center mb-8">Core Tech Stack</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-gray-700">
       <div>Java</div>
       <div>Spring Boot</div>
       <div>Python</div>
-      <div>Blockchain</div>
-      <div>Federated Learning</div>
-      <div>MySQL</div>
       <div>REST APIs</div>
       <div>GitHub Actions</div>
+      <div>Docker</div>
+      <div>MongoDB</div>
+      <div>MySQL</div>
+      <div>LLMs</div>
+      <div>OpenAI API</div>
+      <div>Blockchain</div>
+      <div>Federated Learning</div>
     </div>
   </section>
 
