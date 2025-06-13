@@ -4,99 +4,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MukktiNaadh | Software Engineer</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- SEO + Meta -->
+  <meta name="description" content="MukktiNaadh - Full Stack Software Engineer. Expert in AI, Blockchain, Federated Learning & Java systems.">
+  <meta property="og:title" content="MukktiNaadh | Software Engineer">
+  <meta property="og:image" content="https://your-og-image-url.png">
+  <meta property="og:url" content="https://my-portfolio-eight-steel-34.vercel.app/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Custom Style -->
   <style>
     html {
       scroll-behavior: smooth;
     }
     .animate-text {
-      animation: moveFont 3s ease-in-out infinite alternate;
+      animation: pulseText 3s ease-in-out infinite alternate;
     }
-    @keyframes moveFont {
-      0% {
-        letter-spacing: 2px;
-        transform: translateY(0);
-      }
-      100% {
-        letter-spacing: 5px;
-        transform: translateY(-5px);
-      }
+    @keyframes pulseText {
+      0% { letter-spacing: 1px; transform: scale(1); }
+      100% { letter-spacing: 3px; transform: scale(1.05); }
     }
   </style>
 </head>
-<body class="bg-white text-gray-900 font-sans">
 
-  <!-- Hero Section -->
+<body class="bg-white text-gray-900 font-sans leading-relaxed tracking-wide">
+
+  <!-- Hero -->
   <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b from-black to-gray-900 text-white">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 animate-text">Hi, I’m MukktiNaadh</h1>
-    <p class="text-lg sm:text-xl md:text-2xl mb-8 animate-text">I build systems at the edge of AI, Blockchain & Distributed Computing</p>
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 animate-text">Hi, I’m MukktiNaadh</h1>
+    <p class="text-lg sm:text-xl md:text-2xl mb-6 animate-text">I build systems at the edge of AI, Blockchain & Distributed Computing</p>
     <div class="space-x-4">
-      <a href="https://github.com/mukktinaadh" class="bg-white text-black px-5 py-2 rounded font-medium hover:bg-gray-100">GitHub</a>
-      <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded font-medium hover:bg-blue-700">Contact</a>
+      <a href="https://github.com/mukktinaadh" class="bg-white text-black px-5 py-2 rounded hover:bg-gray-200">GitHub</a>
+      <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700">Contact</a>
+      <a href="mailto:mukktinaadh@gmail.com" class="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700">🚀 Hire Me</a>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="py-20 px-6 max-w-4xl mx-auto">
     <h2 class="text-3xl font-semibold text-center mb-6">About Me</h2>
-    <p class="text-lg text-gray-700 leading-relaxed">
+    <p class="text-lg text-gray-700 leading-relaxed text-center">
       I'm a 3rd year B.Tech CSE (Big Data Analytics) student and a full-stack Java developer with a passion for cutting-edge tech. From building blockchain-backed federated learning platforms to crafting scalable AI tools, I thrive on solving real-world problems with elegant software. I am fluent in system design, cloud deployments, and always curious to push boundaries.
     </p>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section id="projects" class="bg-gray-100 py-20 px-6">
     <h2 class="text-3xl font-semibold text-center mb-10">Highlighted GitHub Projects</h2>
     <div class="grid gap-8 grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto">
 
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+      <!-- Project Card -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
         <h3 class="text-xl font-bold mb-2">VeriBlock-FL</h3>
-        <p class="text-sm text-gray-600 mb-4">A blockchain-powered federated learning platform implementing zk-SNARK privacy protocols. It ensures secure, decentralized training without compromising data privacy.</p>
+        <p class="text-sm text-gray-600 mb-4">Blockchain-powered federated learning with zk-SNARK privacy. Ensures secure, decentralized training.</p>
         <ul class="text-sm text-gray-500 list-disc list-inside mb-4">
-          <li>Blockchain-based identity and audit trails</li>
+          <li>Blockchain audit trails</li>
           <li>Cross-node ML model aggregation</li>
-          <li>zk-SNARKs implementation from scratch</li>
+          <li>Privacy preserving protocols</li>
         </ul>
-        <a href="https://github.com/mukktinaadh/Veriblock-FL" class="text-blue-600 font-medium">View GitHub</a>
+        <a href="https://github.com/mukktinaadh/Veriblock-FL" class="text-blue-600 font-medium">View on GitHub</a>
       </div>
 
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
         <h3 class="text-xl font-bold mb-2">Mental Health Chatbot</h3>
-        <p class="text-sm text-gray-600 mb-4">An AI-driven emotional wellness chatbot built using transformer models and sentiment classification to help users vent, reflect, and receive motivational support.</p>
+        <p class="text-sm text-gray-600 mb-4">AI-powered emotional support bot with NLP and transformer models to understand user mood and provide support.</p>
         <ul class="text-sm text-gray-500 list-disc list-inside mb-4">
           <li>Custom NLP pipeline</li>
-          <li>Sentiment-aware responses</li>
-          <li>Live chat UI + feedback tracker</li>
+          <li>Sentiment analysis</li>
+          <li>React chat interface</li>
         </ul>
-        <a href="https://github.com/mukktinaadh/Mental-Health-Chatbot" class="text-blue-600 font-medium">View GitHub</a>
+        <a href="https://github.com/mukktinaadh/Mental-Health-Chatbot" class="text-blue-600 font-medium">View on GitHub</a>
       </div>
 
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
         <h3 class="text-xl font-bold mb-2">College Management System</h3>
-        <p class="text-sm text-gray-600 mb-4">An enterprise-grade student portal built with Java, Spring Boot, and MySQL to streamline student, faculty, and admin operations.</p>
+        <p class="text-sm text-gray-600 mb-4">Robust ERP-style academic portal using Java + Spring Boot + MySQL, supporting roles, classes, grading.</p>
         <ul class="text-sm text-gray-500 list-disc list-inside mb-4">
-          <li>Student CRUD, role-based login</li>
-          <li>Automated timetable & attendance modules</li>
-          <li>Clean dashboard with REST API</li>
+          <li>Admin & faculty dashboards</li>
+          <li>Attendance & exams module</li>
+          <li>MySQL backend</li>
         </ul>
-        <a href="https://github.com/mukktinaadh/College-Management-System" class="text-blue-600 font-medium">View GitHub</a>
+        <a href="https://github.com/mukktinaadh/College-Management-System" class="text-blue-600 font-medium">View on GitHub</a>
       </div>
 
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
         <h3 class="text-xl font-bold mb-2">CDataDB</h3>
-        <p class="text-sm text-gray-600 mb-4">A blazing fast in-memory database written in C for low-latency storage, demonstrating system-level control and hash-mapped persistence.</p>
+        <p class="text-sm text-gray-600 mb-4">A blazing fast in-memory key-value store written in C. CLI-based database with low-latency ops.</p>
         <ul class="text-sm text-gray-500 list-disc list-inside mb-4">
-          <li>Low-level memory optimization</li>
-          <li>Hashmap + key-value store</li>
-          <li>Built and deployed with full CLI support</li>
+          <li>Custom memory handling</li>
+          <li>Hashmaps & raw pointers</li>
+          <li>Optimized for embedded use</li>
         </ul>
-        <a href="https://github.com/mukktinaadh/CDataDB" class="text-blue-600 font-medium">View GitHub</a>
+        <a href="https://github.com/mukktinaadh/CDataDB" class="text-blue-600 font-medium">View on GitHub</a>
       </div>
 
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills -->
   <section class="py-20 px-6 max-w-6xl mx-auto">
     <h2 class="text-3xl font-semibold text-center mb-8">Core Tech Stack</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-gray-700">
@@ -115,10 +123,10 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact" class="bg-black text-white text-center py-16">
-    <h2 class="text-3xl font-semibold mb-4">Let's Connect</h2>
-    <p class="text-gray-400 mb-6">Open to interviews, collaborations, and freelance projects.</p>
+    <h2 class="text-3xl font-semibold mb-4">Let’s Connect</h2>
+    <p class="text-gray-400 mb-6">Open to interviews, collaborations, freelance projects and internships.</p>
     <p>Email: <a href="mailto:mukktinaadh@gmail.com" class="text-blue-400 hover:underline">mukktinaadh@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/mukktinaadh" class="text-blue-400 hover:underline">@mukktinaadh</a></p>
   </section>
